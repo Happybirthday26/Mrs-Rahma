@@ -101,12 +101,12 @@
         .marker.red { background: linear-gradient(to bottom, #e74c3c, #c0392b); }
         .marker.blue { background: linear-gradient(to bottom, #3498db, #2980b9); }
 
-        /* النص المكتوب */
+        /* النص المكتوب - تم تعديل حجم الخط والمسافات ليناسب الموبايل */
         .board-text {
-            color: #2c3e50; /* لون الماركر الأسود/الكحلي */
+            color: #2c3e50; 
             text-align: center;
-            font-size: 1.4rem;
-            line-height: 1.8;
+            font-size: clamp(16px, 4.5vw, 24px);
+            line-height: 1.5;
             font-weight: 700;
             position: relative;
             z-index: 5;
@@ -152,10 +152,11 @@
             animation: wipeBoard 2s ease-in-out forwards;
         }
 
-        /* النص الجديد */
+        /* النص الجديد - تم تعديل الحجم ليتناسب مع الإطار ولا يخرج عنه */
         .new-text {
-            color: #c0392b; /* قلم أحمر للفت الانتباه */
-            font-size: 1.3rem;
+            color: #c0392b; 
+            font-size: clamp(14px, 4vw, 20px);
+            line-height: 1.5;
         }
 
         .highlight {
@@ -215,7 +216,7 @@
                     <div class="new-text">
                         🚨 إعلان عاجل 🚨<br><br>السبورة دي اتمسحت عشان مفيش كلام يوصف إنتي إيه بالنسبالي بجد..<br>
                         إنتي أحلى حاجة في دنيتي، وحبيت بس أفرحك بكلمتين طالعين من القلب ❤️<br>
-                        <span style="color:#2c3e50; font-size:1rem; display:block; margin-top:10px;">إمضاء: هوبا ✍️</span>
+                        <span style="color:#2c3e50; font-size:clamp(12px, 3.5vw, 16px); display:block; margin-top:5px;">إمضاء: هوبا ✍️</span>
                     </div>
                 `;
                 // إظهار النص الجديد
